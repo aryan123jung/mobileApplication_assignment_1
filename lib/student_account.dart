@@ -45,21 +45,21 @@ class StudentAccount extends BankAccount{
 }
 
 
-void main (){
-  StudentAccount myAccount4 = StudentAccount(
-    accountNumber: 67352, 
-    fname: "Hanagry", 
-    lname: "Oliver",
-    initialBalance: 100
-    );
+// void main (){
+//   StudentAccount myAccount4 = StudentAccount(
+//     accountNumber: 67352, 
+//     fname: "Hanagry", 
+//     lname: "Oliver",
+//     initialBalance: 100
+//     );
 
-    print("Account holder: ${myAccount4.getAccHolderName()}");
-    print("Initial balance: ${myAccount4.balance}");
+//     print("Account holder: ${myAccount4.getAccHolderName()}");
+//     print("Initial balance: ${myAccount4.balance}");
 
-    myAccount4.deposit(4000);
-    myAccount4.deposit(900);
-    myAccount4.deposit(100);
+//     myAccount4.deposit(4000);
+//     myAccount4.deposit(900);
+//     myAccount4.deposit(100);
 
-    myAccount4.withdraw(5000);
-    myAccount4.withdraw(100);
-}
+//     myAccount4.withdraw(5000);
+//     myAccount4.withdraw(100);
+// }

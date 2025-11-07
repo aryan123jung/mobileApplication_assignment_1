@@ -47,20 +47,20 @@ class PremiumAccount extends BankAccount implements InterestBearing{
 }
 
 
-void main(){
-  PremiumAccount myAccount3 = PremiumAccount(
-    accountNumber: 1865, 
-    fname: "Shyam", 
-    lname: "Bahadur",
-    initialBalance: 10000
-    );
-    print("Account holder: ${myAccount3.getAccHolderName()}");
-    print("Initial balance: \$${myAccount3.balance}");
+// void main(){
+//   PremiumAccount myAccount3 = PremiumAccount(
+//     accountNumber: 1865, 
+//     fname: "Shyam", 
+//     lname: "Bahadur",
+//     initialBalance: 10000
+//     );
+//     print("Account holder: ${myAccount3.getAccHolderName()}");
+//     print("Initial balance: \$${myAccount3.balance}");
 
-    myAccount3.deposit(1200);
+//     myAccount3.deposit(1200);
 
-    myAccount3.withdraw(1200);
-    myAccount3.withdraw(100);
+//     myAccount3.withdraw(1200);
+//     myAccount3.withdraw(100);
 
-    print("Interest : \$${myAccount3.calculateInterest()}");
-}
+//     print("Interest : \$${myAccount3.calculateInterest()}");
+// }

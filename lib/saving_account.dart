@@ -50,25 +50,25 @@ class SavingAccount extends BankAccount implements InterestBearing{
 
 
   
-void main (){
-  SavingAccount myAccount = SavingAccount(
-    accountNumber: 123456, 
-    fname: "Ram", 
-    lname: "Doe",
-    initialBalance: 1000,
-    );
+// void main (){
+//   SavingAccount myAccount = SavingAccount(
+//     accountNumber: 123456, 
+//     fname: "Ram", 
+//     lname: "Doe",
+//     initialBalance: 1000,
+//     );
 
-    print("Account holder: ${myAccount.getAccHolderName()}");
-    print("Initial Balance: ${myAccount.balance}");
+//     print("Account holder: ${myAccount.getAccHolderName()}");
+//     print("Initial Balance: ${myAccount.balance}");
 
-    myAccount.deposit(500);
+//     myAccount.deposit(500);
 
-    myAccount.withdraw(300);
-    myAccount.withdraw(700);
-    myAccount.withdraw(100);
-    // myAccount.withdraw(200);
-    // myAccount.withdraw(300);
-    // myAccount.withdraw(100);
+//     myAccount.withdraw(300);
+//     myAccount.withdraw(700);
+//     myAccount.withdraw(100);
+//     // myAccount.withdraw(200);
+//     // myAccount.withdraw(300);
+//     // myAccount.withdraw(100);
 
-    print("Interest : ${myAccount.calculateInterest()}");
-}
+//     print("Interest : ${myAccount.calculateInterest()}");
+// }

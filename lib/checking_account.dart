@@ -45,28 +45,28 @@ class CheckingAccount extends BankAccount {
   }
 }
 
-void main(){
-  CheckingAccount myAccount2 = CheckingAccount(
-    accountNumber: 23455, 
-    fname: "Hari", 
-    lname: "Doe",
-    initialBalance: 100
-    );
+// void main(){
+//   CheckingAccount myAccount2 = CheckingAccount(
+//     accountNumber: 23455, 
+//     fname: "Hari", 
+//     lname: "Doe",
+//     initialBalance: 100
+//     );
 
-    print("Account holder: ${myAccount2.getAccHolderName()}");
-    print("Initial balance: ${myAccount2.balance}");
+//     print("Account holder: ${myAccount2.getAccHolderName()}");
+//     print("Initial balance: ${myAccount2.balance}");
 
-    myAccount2.deposit(100);
+//     myAccount2.deposit(100);
 
-    myAccount2.withdraw(100);
-    myAccount2.withdraw(50);
-    myAccount2.withdraw(40);
-    myAccount2.withdraw(50);
-    myAccount2.withdraw(10);
+//     myAccount2.withdraw(100);
+//     myAccount2.withdraw(50);
+//     myAccount2.withdraw(40);
+//     myAccount2.withdraw(50);
+//     myAccount2.withdraw(10);
 
-    myAccount2.deposit(100);
-    myAccount2.withdraw(10);
-    myAccount2.withdraw(5);
-    myAccount2.withdraw(5);
-}
+//     myAccount2.deposit(100);
+//     myAccount2.withdraw(10);
+//     myAccount2.withdraw(5);
+//     myAccount2.withdraw(5);
+// }
 
