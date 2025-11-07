@@ -17,6 +17,7 @@ class PremiumAccount extends BankAccount implements InterestBearing{
   void deposit(double amount) {
     if(amount>0){
       setBalance(balance + amount);
+      addTransaction("Deposited: \$${amount.toStringAsFixed(2)}. New balance: \$${balance.toStringAsFixed(2)}");
       print("Deposited Balance: \$$amount. New Balance \$$balance");
     }else{
       print("Deposit must be positive.");
@@ -34,6 +35,7 @@ class PremiumAccount extends BankAccount implements InterestBearing{
 
     if(amount > 0 && (balance - amount) >= minBalance){
       setBalance(balance - amount);
+      addTransaction("Withdrew: \$${amount.toStringAsFixed(2)}. New balance: \$${balance.toStringAsFixed(2)}");
       print("Withdrew: \$$amount. Remaining balance: \$$balance");
     }else{
       print("Invalid withdraw amount or insufficient balance");

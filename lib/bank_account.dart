@@ -1,10 +1,18 @@
-import 'package:meta/meta.dart'; // for @protected
+import 'package:meta/meta.dart'; 
 
 abstract class BankAccount{
   final double accountNumber;
   final String fname;
   final String lname;
   double _balance; 
+
+  final List<String> _transactions = [];
+
+    List<String> get transactions => List.unmodifiable(_transactions); 
+
+  void addTransaction(String transaction) {
+    _transactions.add(transaction);
+  }
 
   BankAccount(this.accountNumber,this.fname,this.lname,this._balance);
 

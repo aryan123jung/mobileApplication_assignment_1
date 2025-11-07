@@ -1,5 +1,3 @@
-
-
 import 'package:first_asssignment_bank/bank_account.dart';
 import 'package:first_asssignment_bank/interest_bearing.dart';
 
@@ -18,7 +16,8 @@ class SavingAccount extends BankAccount implements InterestBearing{
   void deposit(double amount){
     if(amount>0){
       setBalance(balance + amount);
-      print("Deposited $amount. New balance: $balance");
+      addTransaction("Deposited: \$${amount.toStringAsFixed(2)}. New balance: \$${balance.toStringAsFixed(2)}");
+      print("Deposited \$$amount. New balance: \$$balance");
     }else{
       print("Deposit amount must be positive");
     }
@@ -36,6 +35,7 @@ class SavingAccount extends BankAccount implements InterestBearing{
     if(amount>0 && (balance-amount) >= minBalance ){
       setBalance(balance - amount);
       _withdrawalsThisMonth ++;
+      addTransaction("Withdrew: \$${amount.toStringAsFixed(2)}. New balance: \$${balance.toStringAsFixed(2)}");
       print("Withdrew $amount. Remaining balance: $balance");
     } else{
       print("Invalid withdraw amount or insufficient balance");

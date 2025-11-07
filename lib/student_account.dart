@@ -22,6 +22,7 @@ class StudentAccount extends BankAccount{
       return;
     }
     setBalance(balance + amount);
+    addTransaction("Deposited: \$${amount.toStringAsFixed(2)}. New balance: \$${balance.toStringAsFixed(2)}");
     print("Deposited: \$$amount. New balance: \$$balance");
 
   }
@@ -39,6 +40,7 @@ class StudentAccount extends BankAccount{
     }
     if(amount > 0){
       setBalance(balance - amount);
+      addTransaction("Withdrew: \$${amount.toStringAsFixed(2)}. New balance: \$${balance.toStringAsFixed(2)}");
       print("Withdrew: \$$amount. New balance: \$$balance");
     }
   }

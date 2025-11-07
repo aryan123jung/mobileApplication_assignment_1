@@ -14,7 +14,8 @@ class CheckingAccount extends BankAccount {
   void deposit(double amount) {
     if(amount>0){
       setBalance(balance + amount);
-      print("Deposited $amount. New Balance: $balance");
+      addTransaction("Deposited: \$${amount.toStringAsFixed(2)}. New balance: \$${balance.toStringAsFixed(2)}");
+      print("Deposited \$$amount. New Balance: \$$balance");
     }else{
       print("Deposit must be positive.");
     }
@@ -38,8 +39,11 @@ class CheckingAccount extends BankAccount {
 
     if(oldBalance >= 0 && balance <0){
       setBalance(balance - 35);
+      addTransaction("Withdrew: \$${amount.toStringAsFixed(2)} + \$35 overdraft fee. New balance: \$${balance.toStringAsFixed(2)}");
       print("Overdraft! A \$35 fee has been applied.");
-    }
+    }else {
+    addTransaction("Withdrew: \$${amount.toStringAsFixed(2)}. New balance: \$${balance.toStringAsFixed(2)}");
+  }
 
     print("Withdrew \$${amount.toStringAsFixed(2)}. New Balance \$${balance.toStringAsFixed(2)}");
   }
