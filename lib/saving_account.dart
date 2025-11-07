@@ -16,7 +16,7 @@ class SavingAccount extends BankAccount{
   @override
   void deposit(double amount){
     if(amount>0){
-      balance += amount;
+      setBalance(balance + amount);
       print("Deposited $amount. New balance: $balance");
     }else{
       print("Deposit amount must be positive");
@@ -33,7 +33,7 @@ class SavingAccount extends BankAccount{
     }
 
     if(amount>0 && (balance-amount) >= minBalance ){
-      balance -= amount;
+      setBalance(balance - amount);
       _withdrawalsThisMonth ++;
       print("Withdrew $amount. Remaining balance: $balance");
     } else{
@@ -62,9 +62,11 @@ void main (){
     myAccount.deposit(500);
 
     myAccount.withdraw(300);
-    myAccount.withdraw(200);
-    myAccount.withdraw(300);
+    myAccount.withdraw(700);
     myAccount.withdraw(100);
+    // myAccount.withdraw(200);
+    // myAccount.withdraw(300);
+    // myAccount.withdraw(100);
 
     print("Interest : ${myAccount.calculateInterest()}");
 }
