@@ -1,7 +1,8 @@
 
 import 'package:first_asssignment_bank/bank_account.dart';
+import 'package:first_asssignment_bank/interest_bearing.dart';
 
-class PremiumAccount extends BankAccount{
+class PremiumAccount extends BankAccount implements InterestBearing{
 
   PremiumAccount({
     required double accountNumber,
@@ -38,6 +39,8 @@ class PremiumAccount extends BankAccount{
       print("Invalid withdraw amount or insufficient balance");
     }
   }
+
+  @override
    double calculateInterest(){
       return balance * 0.05;
     }

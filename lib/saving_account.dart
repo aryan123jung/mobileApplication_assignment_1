@@ -1,8 +1,9 @@
 
 
 import 'package:first_asssignment_bank/bank_account.dart';
+import 'package:first_asssignment_bank/interest_bearing.dart';
 
-class SavingAccount extends BankAccount{
+class SavingAccount extends BankAccount implements InterestBearing{
   int _withdrawalsThisMonth = 0;
 
   SavingAccount({
@@ -41,6 +42,7 @@ class SavingAccount extends BankAccount{
     }
   } 
 
+  @override
   double calculateInterest(){
       return balance * 0.02;
   }
